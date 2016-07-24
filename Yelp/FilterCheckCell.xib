@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkCell" rowHeight="33" id="KGk-i7-Jjw" userLabel="FilterCheckCell" customClass="FilterCheckCell" customModule="Yelp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-SF-oaL">
+                        <rect key="frame" x="10" y="19" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUJ-ch-zb4">
+                        <rect key="frame" x="339" y="3" width="54" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XUJ-ch-zb4" secondAttribute="height" multiplier="1:1" id="OyG-0e-Efv"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="gray_check"/>
+                        <connections>
+                            <action selector="onCheckAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ORZ-hr-xj5"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rvh-SF-oaL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="JBe-A5-51P"/>
+                    <constraint firstItem="Rvh-SF-oaL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Qtm-dQ-VSG"/>
+                    <constraint firstItem="Rvh-SF-oaL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bzP-Lg-9pc"/>
+                    <constraint firstAttribute="trailing" secondItem="XUJ-ch-zb4" secondAttribute="trailing" constant="10" id="dIr-lp-T12"/>
+                    <constraint firstItem="XUJ-ch-zb4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="h9G-3h-fLO"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XUJ-ch-zb4" secondAttribute="bottom" constant="2" id="hS8-So-c4R"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Rvh-SF-oaL" secondAttribute="bottom" constant="5" id="nBZ-Ve-tcn"/>
+                    <constraint firstItem="XUJ-ch-zb4" firstAttribute="centerY" secondItem="Rvh-SF-oaL" secondAttribute="centerY" id="uNI-H9-Eg8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkButton" destination="XUJ-ch-zb4" id="rOI-Yb-FEA"/>
+                <outlet property="titleLabel" destination="Rvh-SF-oaL" id="OB1-bZ-6If"/>
+            </connections>
+            <point key="canvasLocation" x="358.5" y="315"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gray_check" width="522" height="598"/>
+    </resources>
+</document>
